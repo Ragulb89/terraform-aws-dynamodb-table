@@ -77,6 +77,7 @@ module "dynamodb_table" {
     kms_key_arn            = aws_kms_key.secondary.arn
     propagate_tags         = true
     point_in_time_recovery = true
+    deletion_protection_enabled = true
   }]
 
   tags = local.tags
